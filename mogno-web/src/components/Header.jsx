@@ -1,7 +1,5 @@
-import Image from 'next/image'
-import { instagramIcon, linkedinIcon, XIcon, logo } from '../../assets/index'
-import SocialIcons from '../components/SocialIcons'
-import CustomNav from '../components/CustomNav'
+import { instagramIcon, linkedinIcon, XIcon } from '../../assets/index'
+import { CustomNav, SocialIcons, MainLogo } from '../components/index'
 
 const Header = () => {
     const iconsArr = [
@@ -15,15 +13,19 @@ const Header = () => {
         { text: 'Contacto', link: '/contact' },
     ]
     return (
-        <header className='text-white p-20 flex justify-between items-center h-28 bg-mainColor'>
-            <SocialIcons iconsArr={iconsArr} />
-            <Image
-                src={logo}
-                alt='Logo de Mogno Woods'
-                width={275}
-                height={64}
-            />
-            <CustomNav elementsArr={elementsArr} />
+        <header className='text-white p-20 flex justify-between items-center h-52 bg-mainColor'>
+            <div>
+                <SocialIcons iconsArr={iconsArr} />
+            </div>
+            <div className='hidden md:flex'>
+                <MainLogo width={275} height={64} />
+            </div>
+            <div className='md:hidden'>
+                <MainLogo width={200} height={50} />
+            </div>
+            <div>
+                <CustomNav elementsArr={elementsArr} />
+            </div>
         </header>
     )
 }

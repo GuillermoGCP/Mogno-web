@@ -2,7 +2,7 @@ import SocialIcon from './SocialIcon'
 
 const SocialIcons = ({ iconsArr }) => {
     return (
-        <div className='flex space-x-4'>
+        <div className='hidden lg:flex space-x-4'>
             {iconsArr.map((icon, index) => {
                 return (
                     <div key={index}>

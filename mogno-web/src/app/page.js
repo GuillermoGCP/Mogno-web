@@ -1,9 +1,8 @@
-import { Footer, Header } from '../components/index'
+import { Footer } from '../components/index'
 
 export default function Home() {
     return (
         <>
-            <Header />
             <main>
                 <video
                     src='https://www.mogno.es/wp-content/uploads/2024/05/MOGNO_FERIA.mp4'
