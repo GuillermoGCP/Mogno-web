@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
-import { barlow } from '../app/fonts/fonts'
+import { barlow } from '../../assets/fonts/fonts'
 import { BurguerMenu } from './index'
 
 const CustomNav = ({ elementsArr }) => {

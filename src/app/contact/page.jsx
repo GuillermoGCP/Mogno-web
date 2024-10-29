@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { barlow, barlowCondensed } from '../../app/fonts/fonts'
+import { barlow, barlowCondensed } from '../../../assets/fonts/fonts'
 
 const Contact = () => {
     const barlowFontClass = `${barlow.className}`

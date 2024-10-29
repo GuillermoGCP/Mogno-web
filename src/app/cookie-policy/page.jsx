@@ -1,4 +1,4 @@
-import { barlow, barlowCondensed } from '../../app/fonts/fonts'
+import { barlow, barlowCondensed } from '../../../assets/fonts/fonts'
 
 const CookiePolicy = () => {
     const barlowCondensedClass = `${barlowCondensed.className}`

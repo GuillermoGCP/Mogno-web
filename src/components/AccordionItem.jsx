@@ -1,5 +1,5 @@
 'use client'
-import { barlow, barlowCondensed } from '../app/fonts/fonts'
+import { barlow, barlowCondensed } from '../../assets/fonts/fonts'
 import React, { useEffect, useRef, useState } from 'react'
 import Arrow from './svg/Arrow'
 
