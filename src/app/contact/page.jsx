@@ -27,7 +27,7 @@ const Contact = () => {
 
     return (
         <div
-            className={`bg-gray-50 max-w-3xl mx-auto rounded-lg ${barlowFontClass} mt-24 p-8 shadow-xl`}
+            className={`bg-gray-50 max-w-3xl mx-auto rounded-lg ${barlowFontClass} mt-10 p-8 shadow-xl`}
         >
             <h1
                 className={`text-5xl font-bold mb-4 ${barlowCondensedClass} text-center `}
