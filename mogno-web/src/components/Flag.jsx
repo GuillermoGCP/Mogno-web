@@ -2,7 +2,7 @@ const Flag = ({ url }) => {
     const altName = url.split('/').pop().split('.').slice(0, -1)
 
     return (
-        <div className='flex-shrink-0 w-20 h-16'>
+        <div className='hidden lg:flex flex-shrink-0 w-20 h-16'>
             <img
                 src={url}
                 alt={altName}

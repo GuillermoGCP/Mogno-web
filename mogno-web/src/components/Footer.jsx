@@ -14,18 +14,21 @@ const Footer = () => {
             <div
                 className={` mx-auto px-4 ${barlowClass}  flex flex-col items-center`}
             >
-                <MainLogo width={275} height={64} />
-                <div className='mb-8 text-lg flex flex-col items-center'>
+                <div className='hidden md:flex'>
+                    <MainLogo width={275} height={64} />
+                </div>
+                <div className='md:hidden'>
+                    <MainLogo width={200} height={50} />
+                </div>
+
+                <div className='mb-8  text-md md:text-lg flex flex-col items-center'>
                     <h3>MOGNO WOODS S.L</h3>
                     <p>Calle Méndez Nuñez, 51</p>
                     <p>Marin · 36900 · Pontevedra</p>
                     <p>Galicia | España</p>
                 </div>
-                <div className='mb-4 flex flex-col items-center text-lg text-gray-400'>
-                    <p>
-                        © 2024 Mogno Woods S.L. El alma de la madera. Todos los
-                        derechos reservados.
-                    </p>
+                <div className='mb-4 flex flex-col items-center text-md md:text-lg text-gray-400'>
+                    <p>© 2024 Mogno Woods S.L. El alma de la madera.</p>
                     <p>Madereros desde 2014.</p>
                 </div>
 
@@ -36,14 +39,14 @@ const Footer = () => {
                 >
                     <Link
                         href='/cookie-policy'
-                        className='text-gray-300 hover:text-gray-400 p-8 text-lg'
+                        className='text-gray-300 hover:text-gray-400 p-2 md:p-8 text-sm md:text-lg '
                     >
                         POLÍTICA DE COOKIES
                     </Link>
 
                     <Link
                         href='/terms-and-conditions'
-                        className='text-gray-300 hover:text-gray-400 p-8 text-lg'
+                        className='text-gray-300 hover:text-gray-400 p-2 md:p-8 text-sm md:text-lg '
                     >
                         TÉRMINOS Y CONDICIONES
                     </Link>

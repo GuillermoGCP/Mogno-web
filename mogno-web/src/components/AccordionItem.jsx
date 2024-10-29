@@ -31,7 +31,7 @@ function AccordionItem({ title, content }) {
                     onClick={toggleAccordion}
                 >
                     <h3
-                        className={`text-lg font-semibold text-gray-50 ${barlowCondensedFontClass}`}
+                        className={`text-md md:text-base lg:text-lg font-semibold text-gray-50 ${barlowCondensedFontClass}`}
                     >
                         {title}
                     </h3>
@@ -51,10 +51,8 @@ function AccordionItem({ title, content }) {
                         isOpen ? '' : 'max-h-0'
                     }`}
                 >
-                    <div className='p-3 text-gray-100 bg-mainColor overflow-hidden'>
-                        <p className={`text-lg ${barlowFontClass}`}>
-                            {content}
-                        </p>
+                    <div className='  text-gray-100 bg-mainColor text-sm md:text-base lg:text-lg'>
+                        <p>{content}</p>
                     </div>
                 </div>
             </div>

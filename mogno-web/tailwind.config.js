@@ -12,7 +12,10 @@ module.exports = {
                 foreground: 'var(--foreground)',
                 mainColor: 'rgb(22, 22, 22)',
             },
+            screens: {
+                xs: '480px',
+            },
         },
     },
-    plugins: [],
+    plugins: [require('@tailwindcss/typography')],
 }
