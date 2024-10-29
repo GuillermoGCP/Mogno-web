@@ -2,7 +2,7 @@ import { AccordionItem, Flag } from '.'
 
 function Accordion({ content, url }) {
     return (
-        <div className='flex flex-col sm:flex-row justify-center items-center mt-7'>
+        <div className='flex flex-col items-center mt-7 sm:flex-row sm:items-start sm:justify-center'>
             <Flag url={url} />
             <AccordionItem title='PROGRAMA SEGURIDAD' content={content} />
             <AccordionItem title='PROGRAMA XPANDE DIGITAL' content={content} />

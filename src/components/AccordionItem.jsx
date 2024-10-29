@@ -25,7 +25,7 @@ function AccordionItem({ title, content }) {
 
     return (
         <div className='flex items-start rounded-lg overflow-hidden shadow-md transition-all duration-300 w-1/3 mx-7 space-x-4'>
-            <div className='flex flex-col w-full sm:w-64'>
+            <div className='flex flex-col  w-full sm:w-64'>
                 <div
                     className={`flex justify-between items-center p-3 bg-[rgb(22,22,22)] hover:bg-[rgb(30,30,30)] cursor-pointer transition-colors duration-200 rounded-lg`}
                     onClick={toggleAccordion}
@@ -43,18 +43,17 @@ function AccordionItem({ title, content }) {
                         <Arrow />
                     </span>
                 </div>
-
                 {/* Contenido desplegable */}
-                <div className='flex w-full'>
+                <div
+                    ref={contentRef}
+                    className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                        isOpen ? '' : 'max-h-0'
+                    }`}
+                >
                     <div
-                        ref={contentRef}
-                        className={`overflow-hidden  transition-all duration-500 ease-in-out ${
-                            isOpen ? '' : 'max-h-0'
-                        }`}
+                        className={`text-gray-100 bg-mainColor text-sm md:text-base lg:text-lg ${barlowFontClass}`}
                     >
-                        <div className='  text-gray-100 bg-mainColor text-sm md:text-base lg:text-lg'>
-                            <p>{content}</p>
-                        </div>
+                        <p>{content}</p>
                     </div>
                 </div>
             </div>
