@@ -1,21 +1,19 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-    content: [
-        './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-        './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-        './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    ],
-    theme: {
-        extend: {
-            colors: {
-                background: 'var(--background)',
-                foreground: 'var(--foreground)',
-                mainColor: 'rgb(22, 22, 22)',
-            },
-            screens: {
-                xs: '480px',
-            },
+export const content = [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+]
+export const theme = {
+    extend: {
+        colors: {
+            background: 'var(--background)',
+            foreground: 'var(--foreground)',
+            mainColor: 'rgb(22, 22, 22)',
+        },
+        screens: {
+            xs: '480px',
         },
     },
-    plugins: [require('@tailwindcss/typography')],
 }
+export const plugins = [require('@tailwindcss/typography')]

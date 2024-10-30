@@ -9,6 +9,8 @@ const Header = () => {
     ]
     const elementsArr = [
         { text: 'Inicio', link: '/' },
+        { text: 'Servicios', link: '/services' },
+        { text: 'Producto', link: '/product' },
         { text: 'Quienes somos', link: '/about' },
         { text: 'Contacto', link: '/contact' },
     ]

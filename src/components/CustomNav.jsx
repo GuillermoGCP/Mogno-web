@@ -3,17 +3,19 @@ import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { barlow } from '../../assets/fonts/fonts'
 import { BurguerMenu } from './index'
+import { usePathname } from 'next/navigation'
 
 const CustomNav = ({ elementsArr }) => {
     const barlowFontClass = `${barlow.className}`
     const tailwindHeaderStyles = {
-        navLi: 'hover:text-white text-lg lg:text-xl opacity-70 hover:opacity-100 transition duration-300 ease-in-out',
+        navLi: `hover:text-white text-lg lg:text-xl opacity-70 hover:opacity-100 transition duration-300 ease-in-out`,
         ul: 'flex space-x-3 lg:space-x-8',
         dropdown: `absolute bg-gray-300 text-[rgb(22,22,22)] shadow-lg rounded-lg mt-2  z-10 ${barlowFontClass}`,
-        dropdownLi: 'px-4 py-2 hover:bg-gray-200 transition duration-200',
+        dropdownLi: `px-4 py-2 hover:bg-gray-200 transition duration-200`,
     }
 
     const [isOpen, setIsOpen] = useState(false)
+    const pathname = usePathname()
 
     const toggleMenu = () => {
         setIsOpen(!isOpen)
@@ -47,7 +49,9 @@ const CustomNav = ({ elementsArr }) => {
                         {elementsArr.map((element, index) => (
                             <li
                                 key={index}
-                                className={tailwindHeaderStyles.dropdownLi}
+                                className={`${
+                                    tailwindHeaderStyles.dropdownLi
+                                } ${element.link === pathname ? 'hidden' : ''}`}
                             >
                                 <Link
                                     href={element.link}
@@ -67,7 +71,9 @@ const CustomNav = ({ elementsArr }) => {
                     <li key={index}>
                         <Link
                             href={element.link}
-                            className={tailwindHeaderStyles.navLi}
+                            className={`${tailwindHeaderStyles.navLi} ${
+                                element.link === pathname ? 'hidden' : ''
+                            }`}
                         >
                             {element.text}
                         </Link>
